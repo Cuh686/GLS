@@ -1,0 +1,133 @@
+.titulo{
+    font-size:50px ;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 200px;
+    margin-top: 200px;
+}
+
+#principal h2{
+    color: #ffffff;
+
+}
+
+.btn{
+    position: relative;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 10px;
+    text-indent: 10px;
+    z-index: 2;
+}
+
+
+
+
+.btn-3{
+    transition: all 0.6s ease;
+}
+
+.btn-3::after{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 110%;
+    left: -10%;
+    top: 0;
+    transform: skew(20deg, 0deg);
+    background-color: #ffffff;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.btn-3::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: skew(20deg, 0deg);
+    border: 3px solid #03cc57;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.btn-3:hover::after{
+    background-color: #ffffff31;
+    transform: skew(20deg, 0deg) translateX(240px);
+}
+
+.btn-3:hover::before{
+    background-color: #03cc57;
+    border: 3px solid #029740;
+    transform: skew(20deg, 0deg) scale(1.1);
+}
+
+#principal{
+     display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh; 
+   
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+         rgba(0,0,0,0.5)),
+     url("imagenes/GLS\ portada.png");
+     background-size: cover;
+    
+    padding-top: 20px;
+    
+}
+
+#redes{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-bottom: 100px;
+    column-gap: 50px;
+}
+
+#redes .red{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+    min-height: 500px;
+
+}
+
+.red:first-child{
+    color: #ffffff;
+
+    background-image: linear-gradient(
+        rgba(0,0,0,0.2),
+         rgba(0,0,0,0.2)),
+     url("imagenes/facebook.png");
+}
+
+.red:nth-child(2){
+    color: #ffffff;
+
+    background-image: linear-gradient(
+        rgba(0,0,0,0.2),
+         rgba(0,0,0,0.2)),
+     url("imagenes/whatsapp.jpeg");
+}
+
+.red:last-child{
+    color: #ffffff;
+
+    background-image: linear-gradient(
+        rgba(0,0,0,0.2),
+         rgba(0,0,0,0.2)),
+     url("imagenes/TIKTOK.jpg");
+}
+
